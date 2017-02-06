@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" customClass="TabController" customModule="TVTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GHt-xh-oK2" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="wNK-CE-KNz" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="URf-wN-kYM" kind="presentation" identifier="showTVSettings" id="dGI-jE-kUz"/>
+                        <segue destination="1js-Qq-TLo" kind="relationship" relationship="viewControllers" id="Xf3-Ep-vMt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="-4"/>
+        </scene>
+        <!--Sonarr-->
+        <scene sceneID="DlQ-1w-ERh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Sonarr" id="GHt-xh-oK2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="F4W-Vf-fgJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOD-xn-gaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200.5" y="455"/>
+        </scene>
+        <!--NZBget-->
+        <scene sceneID="KFh-Ev-wNY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NZBget" id="1js-Qq-TLo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gn6-Vg-6UB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="678-v8-ymN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211" y="455"/>
+        </scene>
+        <!--CouchPotato-->
+        <scene sceneID="YaG-jN-gwW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CouchPotato" id="wNK-CE-KNz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xGP-7s-4f1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQz-Tg-Hoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.5" y="455"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="6Ir-h3-NGW">
+            <objects>
+                <tableViewController storyboardIdentifier="TVTSettingsViewController" id="75u-vc-xpy" customClass="TVTSettingsViewController" customModule="TVTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="A9P-y2-ZoN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Sonarr" id="dp3-zT-bJx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="sEp-cX-kZ7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sEp-cX-kZ7" id="rUj-Lb-HM5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ll8-Wv-rR2" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="URL"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ll8-Wv-rR2" firstAttribute="centerY" secondItem="rUj-Lb-HM5" secondAttribute="centerY" id="TaU-fW-EGx"/>
+                                                <constraint firstItem="ll8-Wv-rR2" firstAttribute="leading" secondItem="rUj-Lb-HM5" secondAttribute="leading" constant="8" id="eJ3-kK-wfE"/>
+                                                <constraint firstAttribute="trailing" secondItem="ll8-Wv-rR2" secondAttribute="trailing" constant="8" id="z8C-O8-XjL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="APb-xL-ZvB">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="APb-xL-ZvB" id="Obc-7t-edp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="haM-bU-0hi" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="API Key"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="haM-bU-0hi" secondAttribute="trailing" constant="8" id="9ae-ax-EeB"/>
+                                                <constraint firstItem="haM-bU-0hi" firstAttribute="centerY" secondItem="Obc-7t-edp" secondAttribute="centerY" id="J4C-HP-rxs"/>
+                                                <constraint firstItem="haM-bU-0hi" firstAttribute="leading" secondItem="Obc-7t-edp" secondAttribute="leading" constant="8" id="dNx-gz-sPR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="CouchPotato" id="r2I-OY-muO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="byT-1c-1Fc">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="byT-1c-1Fc" id="WOE-pz-rjp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahy-at-hcO" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="URL"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ahy-at-hcO" firstAttribute="centerY" secondItem="WOE-pz-rjp" secondAttribute="centerY" id="Kf6-N0-ogQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ahy-at-hcO" secondAttribute="trailing" constant="8" id="gWk-cC-99l"/>
+                                                <constraint firstItem="Ahy-at-hcO" firstAttribute="leading" secondItem="WOE-pz-rjp" secondAttribute="leading" constant="8" id="hbR-UX-oMf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="2ic-wA-hLQ">
+                                        <rect key="frame" x="0.0" y="236" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ic-wA-hLQ" id="kE8-ej-Kui">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HI0-pj-ZoR" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="API Key"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HI0-pj-ZoR" firstAttribute="centerY" secondItem="kE8-ej-Kui" secondAttribute="centerY" id="Ksk-7i-Vj5"/>
+                                                <constraint firstAttribute="trailing" secondItem="HI0-pj-ZoR" secondAttribute="trailing" constant="8" id="yxA-Eg-DBH"/>
+                                                <constraint firstItem="HI0-pj-ZoR" firstAttribute="leading" secondItem="kE8-ej-Kui" secondAttribute="leading" constant="8" id="zrX-HI-L7o"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="NZBGet" id="agZ-U0-LDO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="mjD-o0-h0B">
+                                        <rect key="frame" x="0.0" y="324" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mjD-o0-h0B" id="Z4N-B7-ijd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9e-xu-GyQ" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="URL"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y9e-xu-GyQ" firstAttribute="centerY" secondItem="Z4N-B7-ijd" secondAttribute="centerY" id="Rqs-Wt-tFi"/>
+                                                <constraint firstItem="Y9e-xu-GyQ" firstAttribute="leading" secondItem="Z4N-B7-ijd" secondAttribute="leading" constant="8" id="SBf-gi-YTW"/>
+                                                <constraint firstAttribute="trailing" secondItem="Y9e-xu-GyQ" secondAttribute="trailing" constant="8" id="uiL-sJ-bSt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Opz-op-DBF">
+                                        <rect key="frame" x="0.0" y="384" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Opz-op-DBF" id="SdF-4U-ccX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPU-Tc-ZDI" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Username"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OPU-Tc-ZDI" firstAttribute="centerY" secondItem="SdF-4U-ccX" secondAttribute="centerY" id="CLu-Lf-7oo"/>
+                                                <constraint firstAttribute="trailing" secondItem="OPU-Tc-ZDI" secondAttribute="trailing" constant="8" id="PtS-KC-b1w"/>
+                                                <constraint firstItem="OPU-Tc-ZDI" firstAttribute="leading" secondItem="SdF-4U-ccX" secondAttribute="leading" constant="8" id="wbM-LN-Qyt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="FiU-mc-b2P">
+                                        <rect key="frame" x="0.0" y="444" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FiU-mc-b2P" id="gcJ-Zs-lrk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUs-AZ-CwC" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Password"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QUs-AZ-CwC" firstAttribute="leading" secondItem="gcJ-Zs-lrk" secondAttribute="leading" constant="8" id="63r-Bc-wGe"/>
+                                                <constraint firstItem="QUs-AZ-CwC" firstAttribute="centerY" secondItem="gcJ-Zs-lrk" secondAttribute="centerY" id="DJY-rZ-Sc4"/>
+                                                <constraint firstAttribute="trailing" secondItem="QUs-AZ-CwC" secondAttribute="trailing" constant="8" id="o7X-Cy-IHy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Networking" id="IfO-mV-BpP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="SpF-2i-KyV">
+                                        <rect key="frame" x="0.0" y="532" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SpF-2i-KyV" id="sM2-m3-3Wd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmF-xv-EW3" customClass="FloatingPlaceholderTextField" customModule="TVTime" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15" width="359" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Timeout"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bmF-xv-EW3" firstAttribute="centerY" secondItem="sM2-m3-3Wd" secondAttribute="centerY" id="M9m-7p-llr"/>
+                                                <constraint firstAttribute="trailing" secondItem="bmF-xv-EW3" secondAttribute="trailing" constant="8" id="NDS-B2-b9x"/>
+                                                <constraint firstItem="bmF-xv-EW3" firstAttribute="leading" secondItem="sM2-m3-3Wd" secondAttribute="leading" constant="8" id="QjA-Fl-3sQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="75u-vc-xpy" id="vOg-FE-AC4"/>
+                            <outlet property="delegate" destination="75u-vc-xpy" id="KpF-GC-850"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wOA-R6-cvi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2jj-cS-1RK">
+                            <connections>
+                                <action selector="doneButtonTapped" destination="75u-vc-xpy" id="7Ac-oN-akv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="couchPotatoApiTextField" destination="HI0-pj-ZoR" id="nDu-nM-FP4"/>
+                        <outlet property="couchPotatoHostTextField" destination="Ahy-at-hcO" id="k6S-B7-YmR"/>
+                        <outlet property="nzbGetHostTextField" destination="Y9e-xu-GyQ" id="LED-4A-QCT"/>
+                        <outlet property="nzbGetPasswordTextField" destination="QUs-AZ-CwC" id="ARK-AR-waS"/>
+                        <outlet property="nzbGetUsernameTextField" destination="OPU-Tc-ZDI" id="uJU-m1-W09"/>
+                        <outlet property="sonarrApiTextField" destination="haM-bU-0hi" id="aGZ-4t-7aA"/>
+                        <outlet property="sonarrHostTextField" destination="ll8-Wv-rR2" id="Hp1-SM-oKI"/>
+                        <outlet property="timeoutTextField" destination="bmF-xv-EW3" id="CQ2-Zo-aLX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xom-Dd-Ynj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.5999999999999" y="-4.0479760119940034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KC0-Uh-ygp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="URf-wN-kYM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbn-ad-s7E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="75u-vc-xpy" kind="relationship" relationship="rootViewController" id="U4k-jb-D6u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5Z-xc-XIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="-4"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="qNG-56-Dyf">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="q74-uC-cp7" customClass="DetailsViewController" customModule="TVTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XQa-vn-Hed"/>
+                        <viewControllerLayoutGuide type="bottom" id="UlY-XB-Vt7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pa7-dB-lMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zrJ-YF-6Xq">
+                                <rect key="frame" x="20" y="40" width="335" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ydf-Pt-hRQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbr-mp-xqC">
+                                <rect key="frame" x="20" y="260" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kbr-mp-xqC" firstAttribute="leading" secondItem="Pa7-dB-lMJ" secondAttribute="leading" constant="20" id="JD9-zc-rQF"/>
+                            <constraint firstItem="kbr-mp-xqC" firstAttribute="top" secondItem="zrJ-YF-6Xq" secondAttribute="bottom" constant="20" id="UcE-x4-nv5"/>
+                            <constraint firstItem="zrJ-YF-6Xq" firstAttribute="leading" secondItem="Pa7-dB-lMJ" secondAttribute="leading" constant="20" id="aYg-fQ-nLf"/>
+                            <constraint firstAttribute="trailing" secondItem="kbr-mp-xqC" secondAttribute="trailing" constant="20" id="nGu-bH-8yq"/>
+                            <constraint firstAttribute="trailing" secondItem="zrJ-YF-6Xq" secondAttribute="trailing" constant="20" id="wEH-du-B2Y"/>
+                            <constraint firstItem="zrJ-YF-6Xq" firstAttribute="top" secondItem="XQa-vn-Hed" secondAttribute="bottom" constant="20" id="xOb-pK-IUh"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="overview" destination="kbr-mp-xqC" id="8NL-mJ-Grh"/>
+                        <outlet property="poster" destination="zrJ-YF-6Xq" id="CI5-87-CSn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jih-PP-9FP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="297"/>
+        </scene>
+    </scenes>
+</document>

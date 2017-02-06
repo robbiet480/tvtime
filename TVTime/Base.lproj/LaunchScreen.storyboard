@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sonarr" translatesAutoresizingMaskIntoConstraints="NO" id="aeL-If-5aw">
+                                <rect key="frame" x="55.5" y="27.5" width="263" height="170.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couchpotato" translatesAutoresizingMaskIntoConstraints="NO" id="MoO-yA-dGa">
+                                <rect key="frame" x="56" y="248" width="263" height="170.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MoO-yA-dGa" secondAttribute="height" multiplier="17:11" id="ecE-d4-caM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nzbget" translatesAutoresizingMaskIntoConstraints="NO" id="0Tl-cq-Hhi">
+                                <rect key="frame" x="55.5" y="468.5" width="263" height="170.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Tl-cq-Hhi" firstAttribute="top" secondItem="MoO-yA-dGa" secondAttribute="bottom" constant="50" id="1hJ-Te-uab"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MoO-yA-dGa" secondAttribute="trailing" constant="40" id="FXy-Kv-ckV"/>
+                            <constraint firstItem="MoO-yA-dGa" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="40" id="IZu-Ai-2Ox"/>
+                            <constraint firstItem="0Tl-cq-Hhi" firstAttribute="width" secondItem="MoO-yA-dGa" secondAttribute="width" id="WIm-Oa-hdp"/>
+                            <constraint firstItem="aeL-If-5aw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="deP-dE-2fD"/>
+                            <constraint firstItem="aeL-If-5aw" firstAttribute="height" secondItem="MoO-yA-dGa" secondAttribute="height" id="gih-6L-ClL"/>
+                            <constraint firstItem="0Tl-cq-Hhi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="i3r-2s-SOq"/>
+                            <constraint firstItem="MoO-yA-dGa" firstAttribute="top" secondItem="aeL-If-5aw" secondAttribute="bottom" constant="50" id="mca-PV-WUK"/>
+                            <constraint firstItem="aeL-If-5aw" firstAttribute="width" secondItem="MoO-yA-dGa" secondAttribute="width" id="p6z-T8-cyw"/>
+                            <constraint firstItem="MoO-yA-dGa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xAc-hg-hvO"/>
+                            <constraint firstItem="0Tl-cq-Hhi" firstAttribute="height" secondItem="MoO-yA-dGa" secondAttribute="height" id="xVd-sy-B2o"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="couchpotato" width="1024" height="663"/>
+        <image name="nzbget" width="400" height="142"/>
+        <image name="sonarr" width="500" height="176"/>
+    </resources>
+</document>

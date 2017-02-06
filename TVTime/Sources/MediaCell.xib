@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="IJQ-vw-yiQ" customClass="MediaCell" customModule="TVTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="605" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IJQ-vw-yiQ" id="r1D-6g-IH4">
+                <rect key="frame" x="0.0" y="0.0" width="605" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UvP-3r-888">
+                        <rect key="frame" x="8" y="2" width="51" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UvP-3r-888" secondAttribute="height" multiplier="68:100" id="rlX-Ak-h3b"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEn-8H-A7d">
+                        <rect key="frame" x="67" y="8" width="530" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbh-3O-5QG">
+                                <rect key="frame" x="0.0" y="0.0" width="530" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-l8-WYg">
+                                <rect key="frame" x="0.0" y="48" width="459" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-l2-Q12">
+                                <rect key="frame" x="467" y="48" width="43" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nbh-3O-5QG" secondAttribute="trailing" id="1Mg-pO-7vN"/>
+                            <constraint firstItem="jFA-l2-Q12" firstAttribute="centerY" secondItem="C5K-l8-WYg" secondAttribute="centerY" id="81s-oe-WCl"/>
+                            <constraint firstAttribute="trailing" secondItem="jFA-l2-Q12" secondAttribute="trailing" constant="20" id="Bxp-6Z-SlS"/>
+                            <constraint firstItem="jFA-l2-Q12" firstAttribute="leading" secondItem="C5K-l8-WYg" secondAttribute="trailing" constant="8" id="Iaw-2u-Po5"/>
+                            <constraint firstItem="nbh-3O-5QG" firstAttribute="leading" secondItem="NEn-8H-A7d" secondAttribute="leading" id="MbB-6Z-97M"/>
+                            <constraint firstAttribute="bottom" secondItem="C5K-l8-WYg" secondAttribute="bottom" id="YMx-XR-PLr"/>
+                            <constraint firstItem="C5K-l8-WYg" firstAttribute="leading" secondItem="nbh-3O-5QG" secondAttribute="leading" id="cgC-3D-9th"/>
+                            <constraint firstItem="nbh-3O-5QG" firstAttribute="top" secondItem="NEn-8H-A7d" secondAttribute="top" id="jgm-Jn-8GL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="UvP-3r-888" secondAttribute="bottom" constant="2" id="6NM-7I-sPe"/>
+                    <constraint firstAttribute="trailing" secondItem="NEn-8H-A7d" secondAttribute="trailing" constant="8" id="9BC-b1-Tle"/>
+                    <constraint firstItem="UvP-3r-888" firstAttribute="top" secondItem="r1D-6g-IH4" secondAttribute="top" constant="2" id="B7Q-O9-WDc"/>
+                    <constraint firstItem="UvP-3r-888" firstAttribute="leading" secondItem="r1D-6g-IH4" secondAttribute="leading" constant="8" id="HcG-LW-lYJ"/>
+                    <constraint firstItem="UvP-3r-888" firstAttribute="centerY" secondItem="r1D-6g-IH4" secondAttribute="centerY" id="aLe-AX-hWS"/>
+                    <constraint firstItem="NEn-8H-A7d" firstAttribute="top" secondItem="r1D-6g-IH4" secondAttribute="top" constant="8" id="c45-XB-FTG"/>
+                    <constraint firstAttribute="bottom" secondItem="NEn-8H-A7d" secondAttribute="bottom" constant="8" id="cD5-dB-1Re"/>
+                    <constraint firstItem="NEn-8H-A7d" firstAttribute="leading" secondItem="UvP-3r-888" secondAttribute="trailing" constant="8" id="ltt-JL-7ou"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="airDate" destination="C5K-l8-WYg" id="EPc-ea-iA5"/>
+                <outlet property="posterImage" destination="UvP-3r-888" id="XX5-MR-376"/>
+                <outlet property="quality" destination="jFA-l2-Q12" id="lAr-Q3-nAK"/>
+                <outlet property="title" destination="nbh-3O-5QG" id="OFg-nC-VeY"/>
+            </connections>
+            <point key="canvasLocation" x="218.5" y="89"/>
+        </tableViewCell>
+    </objects>
+</document>
