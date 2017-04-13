@@ -28,7 +28,7 @@ extension BaseSeriesMutable: DictionaryRepresentationProtocol {
         dictionary.updateValue(baseSeries.overview, forKey: Series.Keys.overview)
         dictionary.updateValue(baseSeries.network, forKey: Series.Keys.network)
         dictionary.updateValue(baseSeries.year, forKey: Series.Keys.year)
-        dictionary.updateValue(baseSeries.firstAired.toString(.custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.firstAired)
+        dictionary.updateValue(baseSeries.firstAired.toString(format: .custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.firstAired)
         
         if let profile = baseSeries.profile {
             dictionary.updateValue(profile.id, forKey: Series.Keys.qualityProfileId)

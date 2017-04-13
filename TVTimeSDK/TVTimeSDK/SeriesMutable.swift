@@ -45,7 +45,7 @@ extension SeriesMutable: DictionaryRepresentationProtocol {
         dictionary.updateValue(series.overview, forKey: Series.Keys.overview)
         dictionary.updateValue(series.network, forKey: Series.Keys.network)
         dictionary.updateValue(series.year, forKey: Series.Keys.year)
-        dictionary.updateValue(series.firstAired.toString(.custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.firstAired)
+        dictionary.updateValue(series.firstAired.toString(format: .custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.firstAired)
         
         if let images = series.images {
             dictionary.updateValue(images.toDictionary(), forKey: Series.Keys.images)
@@ -79,14 +79,14 @@ extension SeriesMutable: DictionaryRepresentationProtocol {
         dictionary.updateValue(series.imdbId, forKey: Series.Keys.imdbId)
         dictionary.updateValue(series.genres, forKey: Series.Keys.genres)
         dictionary.updateValue(series.tags, forKey: Series.Keys.tags)
-        dictionary.updateValue(series.added.toString(.custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.added)
+        dictionary.updateValue(series.added.toString(format: .custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.added)
         dictionary.updateValue(series.ratings, forKey: Series.Keys.ratings)
         dictionary.updateValue(series.seasonCount, forKey: Series.Keys.seasonCount)
         dictionary.updateValue(series.runtime, forKey: Series.Keys.runtime)
         dictionary.updateValue(series.id, forKey: Series.Keys.id)
         
         if let nextAiring = series.nextAiring, nextAiring != Date.distantFuture {
-            dictionary.updateValue(nextAiring.toString(.custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.nextAiring)
+            dictionary.updateValue(nextAiring.toString(format: .custom(DefaultValueKey.SonarrDateFormatString), timeZone: .utc), forKey: Series.Keys.nextAiring)
         }
         
         return dictionary

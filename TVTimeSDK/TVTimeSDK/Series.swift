@@ -5,6 +5,7 @@
  ******************************************************************************/
 
 import SwiftyJSON
+import AFDateHelper
 
 public final class Series: BaseSeries {
 
@@ -132,7 +133,12 @@ public final class Series: BaseSeries {
         self.alternateTitles = alternateTitles
         self.genres = genres
         self.tags = tags
-        self.added = Date(fromString: added, format: .custom(DefaultValueKey.SonarrDateFormatString))
+
+        if let addedDate = Date(fromString: added, format: .custom(DefaultValueKey.SonarrDateFormatString)) {
+            self.added = addedDate
+        } else {
+            self.added = Date()
+        }
         self.ratings = ratings
         self.seasonCount = seasonCount
         self.runtime = runtime
@@ -166,22 +172,22 @@ extension Series {
             return ""
         }
         
-        if date.isToday() {
-            return "\(date.toString(.custom("h:mm a"), timeZone: .local))"
-        } else if date.isThisWeek() {
-            return date.shortWeekdayToString()
-        } else if date.isNextWeek() {
-            if date.shortWeekdayToString() == "Sun" {
-                return "\(date.shortWeekdayToString()) at \(date.toString(.custom("h:mm a"), timeZone: .local))"
+        if date.compare(.isToday) {
+            return "\(date.toString(format: .custom("h:mm a"), timeZone: .local))"
+        } else if date.compare(.isThisWeek) {
+            return date.toString(style: .shortWeekday)
+        } else if date.compare(.isNextWeek) {
+            if date.toString(style: .shortWeekday) == "Sun" {
+                return "\(date.toString(style: .shortWeekday)) at \(date.toString(format: .custom("h:mm a"), timeZone: .local))"
             } else {
-                return "Next \(date.shortWeekdayToString()) at \(date.toString(.custom("h:mm a"), timeZone: .local))"
+                return "Next \(date.toString(style: .shortWeekday)) at \(date.toString(format: .custom("h:mm a"), timeZone: .local))"
             }
-        } else if date.isThisYear() {
-            return "Next Episode: \(date.shortMonthToString()) \(date.day())\(date.daySuffix()) at \(date.toString(.custom("h:mm a"), timeZone: .local))"
+        } else if date.compare(.isThisYear) {
+            return "Next Episode: \(date.toString(style: .shortMonth)) \(date.toString(format: .custom("dd")))\(date.daySuffix()) at \(date.toString(format: .custom("h:mm a"), timeZone: .local))"
         } else if date == Date.distantFuture {
             return "Next Episode: N/A"
         } else {
-            return "Next Episode: \(date.toString(.custom("MMM dd yyyy, h:mm a"), timeZone: .local))"
+            return "Next Episode: \(date.toString(format: .custom("MMM dd yyyy, h:mm a"), timeZone: .local))"
         }
     }
 }

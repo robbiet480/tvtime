@@ -78,7 +78,7 @@ public class BaseSeries {
         path = json[Keys.path].string
         
         if let firstAired = json[Keys.firstAired].string {
-            self.firstAired = Date(fromString: firstAired, format: .custom(DefaultValueKey.SonarrDateFormatString))
+            self.firstAired = Date(fromString: firstAired, format: .custom(DefaultValueKey.SonarrDateFormatString))!
             
         } else {
             self.firstAired = Date.distantPast
